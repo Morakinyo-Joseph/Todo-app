@@ -13,7 +13,7 @@
 
 <div class="container">
 
-    <form action="todo.php", method="get">
+    <form action="todo.php", method="post">
         <input type="text", name="new_task", class="form-control", placeholder="Input New Task Here">
         <input type="submit", value="submit", class="btn btn-success">
 
@@ -21,7 +21,7 @@
 
     <?php
 
-        $newTask = $_GET["new_task"];
+        $newTask = $_POST["new_task"];
 
         if(file_exists("myjson.json")){
             $file = "myjson.json";
@@ -75,7 +75,7 @@
             }
             
             // removing data when the done key has being clicked
-            $done_id = $_GET['done'];
+            $done_id = $_POST['done'];
             if ($done_id !== null){
                 $json_file = 'myjson.json';
                 $json_data = file_get_contents($json_file);
