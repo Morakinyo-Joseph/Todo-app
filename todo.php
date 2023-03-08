@@ -15,6 +15,7 @@
 
     <form action="todo.php", method="post">
         <input type="text", name="new_task", class="form-control", placeholder="Input New Task Here">
+        <br>
         <input type="submit", value="submit", class="btn btn-success">
 
     <br>
