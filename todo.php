@@ -27,7 +27,7 @@
             // connect to the database
             $server = "localhost";
             $username = "root";
-            $password = "Moraksj03mysql$.";
+            $password = "mypassword";
             $database = "mydb";
             $conn = mysqli_connect($server, $username, $password, $database);
             
@@ -66,7 +66,7 @@
                 {
                     $del_sql = "DELETE FROM task WHERE id = $id";
                     $del_result = mysqli_query($conn, $del_sql);
-                    header("Refresh: 0.5");
+                    header("Refresh: 0.5"); //after the task is deleted the whole page is automatically reloaded to such the results
                 }
             }
 
